@@ -100,7 +100,8 @@ $(function(){
             //$('#container').append(robDiv);
             
         }
-
+        
+        
         // shuffle function
         // http://css-tricks.com/snippets/javascript/shuffle-array/
         function Shuffle(o) {
@@ -153,16 +154,17 @@ $(function(){
         // whom are we showing?
         var selector = $(this).attr('data-filter');
         
-//        
-//        if (selector == '.matt') {
-//            $container.css({'width' : 500});
-//            
-//        }
-//        
-//        if (selector == '*') {
-//            $container.css({'width' : 1100});
-//        }
-//        
+        if (selector == '*') {
+            $container.css({
+                'max-width' : 1100
+            });
+        } else {
+            $container.css({
+                'max-width' : 500
+            });
+            
+        }      
+        
         // reinit isotope, with sort and show params
         $container.isotope({ 
             filter: selector,
